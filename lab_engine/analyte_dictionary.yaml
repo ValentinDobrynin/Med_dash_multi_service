@@ -1,0 +1,3167 @@
+# analyte_dictionary.yaml — контракт C1 (ТЗ №1 §1а.1)
+# Сгенерирован gen_dictionary.py из GROUPS/TOPICS/SYNONYMS/parsed.json.
+# analyte_id ИММУТАБЕЛЕН. Новый маркер -> добавь в SYNONYMS+GROUPS и перегенерируй.
+
+- analyte_id: hemoglobin
+  name_ru: Гемоглобин
+  panel: blood_count
+  unit_canonical: г/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Haemoglobin
+    - haemoglobin
+    - hb
+    - hemoglobin
+    - hämoglobin
+    - Гемоглобин
+    - Гемоглобин (HGB)
+    - Гемоглобин (Hb)
+    - "Гликированый гемоглобин (HbA1%)"
+    - "Дельта-гемоглобин"
+    - "Дельта-гемоглобин (Delta-He)"
+    - Содержание гемоглобина в ретикулоцитах
+    - "Содержание гемоглобина в ретикулоците (RET-He)"
+    - гемоглобин
+    - гемоглобин(hb)
+
+- analyte_id: rbc
+  name_ru: Эритроциты
+  panel: blood_count
+  unit_canonical: 10^12/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Erythrocytes
+    - erythrocytes
+    - erythrozyten
+    - rbc
+    - Эритроциты
+    - Эритроциты (RBC)
+    - эритроциты
+
+- analyte_id: hematocrit
+  name_ru: Гематокрит
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Haematocrit
+    - "Haematocrit %"
+    - haematocrit
+    - hct
+    - hematocrit
+    - hämatokrit
+    - Гематокрит
+    - Гематокрит (HCT)
+    - гематокрит
+
+- analyte_id: mcv
+  name_ru: MCV
+  panel: blood_count
+  unit_canonical: фл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - MCV
+    - Mean Cell Volume
+    - mcv
+    - meancellvolume
+    - Ср. объем эритроцитов
+    - Средний объем эритроцита (MCV)
+    - среднийобъемэритроцита
+    - среднийобъёмэритроцита
+
+- analyte_id: mch
+  name_ru: MCH
+  panel: blood_count
+  unit_canonical: пг
+  value_type: quantitative
+  direction: window
+  aliases:
+    - MCH
+    - Mean Cell Haemoglobin
+    - mch
+    - meancellhaemoglobin
+    - meancellhemoglobin
+    - Ср. содерж. Hb в эритроците
+    - Среднее содержание Hb в эритроците (MCH)
+    - ср.содерж.hbвэритроците
+    - среднеесодержаниеhbвэритроците
+
+- analyte_id: mchc
+  name_ru: MCHC
+  panel: blood_count
+  unit_canonical: г/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - MCHC
+    - Mean Cell Haemoglobin Conc
+    - mchc
+    - meancellhaemoglobinconc
+    - meancellhemoglobinconcentration
+    - Ср. конц. Hb в 1 эритроц
+    - Средняя концентрация Hb в эритроците (MCHC)
+    - Средняя концентрация гемоглобина в эритроците (MCHC)
+    - ср.конц.hbв1эритроц
+    - средняяконцентрацияhbвэритроците
+    - средняяконцентрациягемоглобина
+    - средняяконцентрациягемоглобинавэритроците
+
+- analyte_id: rdw
+  name_ru: RDW
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - RDW
+    - rdw
+    - "rdw-cv"
+    - Гетерогенность эритроцитов по объему (RDW)
+    - "Гетерогенность эритроцитов по объему (RDW-CV)"
+    - "Индекс анизоцитоза эритроцитов (RDW-CV)"
+    - гетерогенностьэритроцитовпообъему
+    - гетерогенностьэритроцитовпообъёму
+
+- analyte_id: rdw_sd
+  name_ru: "RDW-SD"
+  panel: blood_count
+  unit_canonical: фл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - "RDW-SD"
+    - "rdw-sd"
+    - "Гетерогенность эритроцитов по объему (RDW-SD)"
+    - "Индекс анизоцитоза эритроцитов (RDW-SD)"
+    - "гетерогенность эритроцитов по объему (rdw-sd)"
+
+- analyte_id: mikrotsity_micror
+  name_ru: Микроциты (MicroR)
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - microcytes
+    - micror
+    - Микроциты (MicroR)
+    - микроциты
+    - микроциты(micror)
+
+- analyte_id: makrotsity_macror
+  name_ru: Макроциты (MacroR)
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - macrocytes
+    - macror
+    - Макроциты (MacroR)
+    - макроциты
+    - макроциты(macror)
+
+- analyte_id: normoblasty_nrbc
+  name_ru: Нормобласты (NRBC)
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - nrbc
+    - Нормобласты (NRBC)
+    - Нормобласты (ядросодержащие эритроциты) (NRBC)
+    - нормобласты
+    - нормобласты (ядросодержащие эритроциты) (nrbc)
+
+- analyte_id: retikulotsity_abs
+  name_ru: Ретикулоциты абс.
+  panel: blood_count
+  unit_canonical: 10^12/л
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Абсолютное количество ретикулоцитов
+    - Ретикулоциты абс.
+    - абсолютноеколичестворетикулоцитов
+    - ретикулоцитыабс
+
+- analyte_id: retikulotsity
+  name_ru: "Ретикулоциты %"
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "ret%"
+    - "reticulocytes%"
+    - Относительное количество ретикулоцитов
+    - "Ретикулоциты %"
+    - "Ретикулоциты, отн. (RET%)"
+    - относительноеколичестворетикулоцитов
+    - "ретикулоциты,отн.(ret%)"
+    - "ретикулоцитыотнret%"
+
+- analyte_id: nezrelye_retikulotsity
+  name_ru: Незрелые ретикулоциты
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - immaturereticulocytes
+    - Незрелые ретикулоциты
+    - незрелыеретикулоциты
+
+- analyte_id: fraktsiya_nezrelyh_retikulotsitov_ifr
+  name_ru: Фракция незрелых ретикулоцитов (IFR)
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - ifr
+    - Фракция незрелых ретикулоцитов (IFR)
+    - фракциянезрелыхретикулоцитов
+    - фракциянезрелыхретикулоцитов(ifr)
+
+- analyte_id: wbc
+  name_ru: Лейкоциты
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Leucocytes
+    - Urine Leucocytes
+    - leucocytes
+    - leukocytes
+    - leukozyten
+    - wbc
+    - Лейкоциты
+    - Лейкоциты (WBC)
+    - Лейкоциты (колич.)
+    - лейкоциты
+
+- analyte_id: neytrofily
+  name_ru: Нейтрофилы
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Segmented Neutrophils
+    - neu
+    - neutrophils
+    - segmentedneutrophils
+    - Нейтрофилы
+    - Нейтрофилы (NEU)
+    - Нейтрофилы абс.
+    - Нейтрофилы сегментоядерные абс.
+    - нейтрофилы(neu)
+
+- analyte_id: neytrofily_2
+  name_ru: "Нейтрофилы %"
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Band Neutrophils
+    - Segmented Neutrophils
+    - "segmentedneutrophils%"
+    - "Нейтрофилы %"
+    - Нейтрофилы (NEU)
+    - Нейтрофилы (общие)
+    - Нейтрофилы сегментоядерные
+    - "нейтрофилы%"
+
+- analyte_id: limfotsity
+  name_ru: Лимфоциты
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Lymphocytes
+    - lym
+    - lymphocytes
+    - Лимфоциты
+    - Лимфоциты (LYM)
+    - Лимфоциты абс.
+    - "Реактивные лимфоциты (RE-LYMP)"
+    - лимфоциты(lym)
+
+- analyte_id: limfotsity_2
+  name_ru: "Лимфоциты %"
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Lymphocytes
+    - "lymphocytes%"
+    - Лимфоциты
+    - "Лимфоциты %"
+    - Лимфоциты (LYM)
+    - "Реактивные лимфоциты (RE-LYMP)"
+    - "лимфоциты%"
+    - лимфоцитыпроцент
+
+- analyte_id: monotsity
+  name_ru: Моноциты
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Monocytes
+    - mon
+    - monocytes
+    - Моноциты
+    - Моноциты (MON)
+    - Моноциты абс.
+    - моноциты(mon)
+
+- analyte_id: monotsity_2
+  name_ru: "Моноциты %"
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Monocytes
+    - "monocytes%"
+    - Моноциты
+    - "Моноциты %"
+    - Моноциты (MON)
+    - "моноциты%"
+
+- analyte_id: eozinofily
+  name_ru: Эозинофилы
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Eosinophils
+    - eos
+    - eosinophils
+    - Эозинофилы
+    - Эозинофилы (EOS)
+    - Эозинофилы абс.
+    - эозинофилы(eos)
+
+- analyte_id: eozinofily_2
+  name_ru: "Эозинофилы %"
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Eosinophils
+    - "eosinophils%"
+    - Эозинофилы
+    - "Эозинофилы %"
+    - Эозинофилы (EOS)
+    - "эозинофилы%"
+
+- analyte_id: bazofily
+  name_ru: Базофилы
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Basophils
+    - bas
+    - basophils
+    - Базофилы
+    - Базофилы (BAS)
+    - Базофилы абс.
+    - базофилы(bas)
+
+- analyte_id: bazofily_2
+  name_ru: "Базофилы %"
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Basophils
+    - "basophils%"
+    - Базофилы
+    - "Базофилы %"
+    - Базофилы (BAS)
+    - "базофилы%"
+
+- analyte_id: bolshie_neokrashennye_kletki_luc
+  name_ru: Большие неокрашенные клетки (LUC)
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Large Unstained Cells
+    - largeunstainedcells
+    - luc
+    - Большие неокрашенные клетки (LUC)
+
+- analyte_id: nezrelye_granulotsity_ig
+  name_ru: Незрелые гранулоциты (IG)
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Незрелые гранулоциты (IG)
+
+- analyte_id: metamielotsity
+  name_ru: Метамиелоциты
+  panel: blood_count
+  unit_canonical: null
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - metamyelocytes
+    - Метамиелоциты
+    - метамиелоциты
+
+- analyte_id: mielotsity
+  name_ru: Миелоциты
+  panel: blood_count
+  unit_canonical: 10^3/uL
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Myelocytes
+    - myelocytes
+    - Миелоциты
+    - миелоциты
+
+- analyte_id: plazmaticheskie_kletki_as_lymp
+  name_ru: "Плазматические клетки (AS-LYMP)"
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "as-lymp"
+    - aslymp
+    - "Плазматические клетки (AS-LYMP)"
+    - плазматическиеклетки
+    - "плазматическиеклетки(as-lymp)"
+
+- analyte_id: reaktivnost_neytrofilov_neut_ri
+  name_ru: "Реактивность нейтрофилов (NEUT-RI)"
+  panel: blood_count
+  unit_canonical: SI
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "neut-ri"
+    - neutri
+    - "Интенсивность реактивности нейтрофилов (NEUT-RI)"
+    - "Реактивность нейтрофилов (NEUT-RI)"
+    - "интенсивностьреактивностинейтрофилов(neut-ri)"
+
+- analyte_id: granulyarnost_neytrofilov_neut_gi
+  name_ru: "Гранулярность нейтрофилов (NEUT-GI)"
+  panel: blood_count
+  unit_canonical: null
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "neut-gi"
+    - neutgi
+    - "Гранулярность нейтрофилов (NEUT-GI)"
+    - "показательгранулярностинейтрофилов(neut-gi)"
+
+- analyte_id: platelets
+  name_ru: Тромбоциты
+  panel: blood_count
+  unit_canonical: 10^9/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Thrombocytes
+    - platelets
+    - plt
+    - thrombocytes
+    - thrombozyten
+    - Тромбоциты
+    - Тромбоциты (PLT)
+    - тромбоциты
+
+- analyte_id: mpv
+  name_ru: MPV
+  panel: blood_count
+  unit_canonical: фл
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - MPV
+    - mpv
+    - Средний объем тромбоцитов (MPV)
+    - среднийобъемтромбоцитов
+    - среднийобъёмтромбоцитов
+
+- analyte_id: pct
+  name_ru: PCT
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - PCT
+    - pct
+    - Тромбокрит (PCT)
+    - тромбокрит
+
+- analyte_id: pdw
+  name_ru: PDW
+  panel: blood_count
+  unit_canonical: фл
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - PDW
+    - pdw
+    - Гетерогенность тромбоцитов по объему (PDW)
+    - гетерогенностьтромбоцитовпообъему
+
+- analyte_id: koeffitsient_krupnyh_trombotsitov_p_lcr
+  name_ru: "Коэффициент крупных тромбоцитов (P-LCR)"
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "p-lcr"
+    - plcr
+    - "Коэффициент крупных тромбоцитов (P-LCR)"
+    - "Коэффициент числа крупных тромбоцитов (P-LCR)"
+    - коэффициенткрупныхтромбоцитов
+    - "коэффициентчислакрупныхтромбоцитов(p-lcr)"
+
+- analyte_id: esr
+  name_ru: СОЭ
+  panel: blood_count
+  unit_canonical: мм/ч
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - ESR     (Westergren 1 Hour)
+    - esr
+    - esrwestergren1hour
+    - westergren
+    - СОЭ
+    - СОЭ (по Вестергрену)
+    - соэ
+    - соэ(повестергрену)
+
+- analyte_id: alt
+  name_ru: АЛТ
+  panel: biochem
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Alanine Amonitransferase
+    - "Alanine-aminotransferase"
+    - alanineaminotransferase
+    - alanineamonitransferase
+    - alt
+    - АЛТ
+    - Аланинаминотрансфераза (АЛТ)
+    - аланинаминотрансфераза
+    - аланинаминотрансфераза(алт)
+    - алт
+
+- analyte_id: ast
+  name_ru: АСТ
+  panel: biochem
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Aspartate Aminotransferase
+    - "Aspartate-aminotransferase"
+    - "aspartate-aminotransferase"
+    - aspartateaminotransferase
+    - ast
+    - АСТ
+    - Аспартатаминотрансфераза (АСТ)
+    - аспартатаминотрансфераза
+    - аспартатаминотрансфераза(аст)
+    - аст
+
+- analyte_id: ggt
+  name_ru: ГГТ
+  panel: biochem
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Gamma Glutamyletransferase
+    - "gamma-glutamyltransferase"
+    - "gamma-gt"
+    - gammaglutamyletransferase
+    - gammaglutamyltransferase
+    - gammagt
+    - ggt
+    - ГГТ
+    - "Гамма-ГТ"
+    - "гамма-гт"
+    - гаммагт
+    - ггт
+
+- analyte_id: alp
+  name_ru: Щелочная фосфатаза
+  panel: biochem
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Alkaline Phosphatase
+    - alkalinephosphatase
+    - alkalischephosphatase
+    - alp
+    - Фосфатаза щелочная
+    - Щелочная фосфатаза
+    - фосфатазащелочная
+    - щелочнаяфосфатаза
+
+- analyte_id: ldh
+  name_ru: ЛДГ
+  panel: biochem
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - lactatedehydrogenase
+    - ldh
+    - ЛДГ
+    - Лактатдегидрогеназа (ЛДГ)
+    - лактатдегидрогеназа
+    - лактатдегидрогеназа(лдг)
+    - лдг
+
+- analyte_id: bilirubin_total
+  name_ru: Билирубин общий
+  panel: biochem
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Bilirubin Total
+    - bilirubintotal
+    - gesamtbilirubin
+    - totalbilirubin
+    - Билирубин общий
+    - билирубинобщий
+
+- analyte_id: bilirubin_direct
+  name_ru: Билирубин прямой
+  panel: biochem
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - bilirubindirekt
+    - directbilirubin
+    - Билирубин прямой
+    - билирубинпрямой
+
+- analyte_id: bilirubin_nepryamoy
+  name_ru: Билирубин непрямой
+  panel: biochem
+  unit_canonical: null
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - indirectbilirubin
+    - Билирубин непрямой
+    - билирубиннепрямой
+
+- analyte_id: creatinine
+  name_ru: Креатинин
+  panel: biochem
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Creatinine
+    - creatinine
+    - kreatinin
+    - Креатинин
+    - креатинин
+
+- analyte_id: tsistatin_s
+  name_ru: Цистатин С
+  panel: biochem
+  unit_canonical: мг/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - cystatin c
+    - cystatinc
+    - Цистатин С
+    - цистатин с
+    - "цистатин-с"
+    - цистатинс
+
+- analyte_id: urea
+  name_ru: Мочевина
+  panel: biochem
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Urea
+    - Ureaplasma parvum (Parvo)
+    - harnstoff
+    - urea
+    - Мочевина
+    - мочевина
+
+- analyte_id: uric_acid
+  name_ru: Мочевая кислота
+  panel: biochem
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Uric Acid
+    - Uric Acid (mg/L)
+    - harnsäure
+    - uricacid
+    - Мочевая кислота
+    - мочеваякислота
+
+- analyte_id: total_protein
+  name_ru: Общий белок
+  panel: biochem
+  unit_canonical: г/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Total Protein
+    - gesamteiweiss
+    - totalprotein
+    - Общий белок
+    - общийбелок
+
+- analyte_id: albumin
+  name_ru: Альбумин
+  panel: biochem
+  unit_canonical: г/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - albumin
+    - Альбумин
+    - Микроальбумин(разовая порция)
+    - альбумин
+
+- analyte_id: globuliny
+  name_ru: Глобулины
+  panel: biochem
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - globulin
+    - Глобулины
+    - глобулины
+
+- analyte_id: alfa_amilaza
+  name_ru: "Альфа-амилаза"
+  panel: biochem
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - alphaamylase
+    - amylase
+    - "Альфа-амилаза"
+    - "альфа-амилаза"
+    - альфаамилаза
+
+- analyte_id: amilaza_pankreaticheskaya
+  name_ru: Амилаза панкреатическая
+  panel: biochem
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - pancreaticamylase
+    - Амилаза панкреатическая
+    - Панкреатическая амилаза
+    - амилазапанкреатическая
+    - панкреатическаяамилаза
+
+- analyte_id: lipaza
+  name_ru: Липаза
+  panel: biochem
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - lipase
+    - Липаза
+    - липаза
+
+- analyte_id: kreatinfosfokinaza_kfk
+  name_ru: Креатинфосфокиназа (КФК)
+  panel: lipids_cardio
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Creatine Kinase
+    - ck
+    - creatinekinase
+    - creatinkinase
+    - Креатинфосфокиназа
+    - Креатинфосфокиназа (КФК)
+    - креатинфосфокиназа
+    - кфк
+
+- analyte_id: kreatinkinaza_mv_kfk_mv
+  name_ru: "Креатинкиназа МВ (КФК-МВ)"
+  panel: lipids_cardio
+  unit_canonical: Ед/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - "ck-mb"
+    - ckmb
+    - "Креатинкиназа МВ (КФК-МВ)"
+    - "Креатинкиназа-МВ"
+    - Креатинфосфокиназа MB
+    - креатинкиназамв
+    - креатинфосфокиназаmb
+    - "кфк-мв"
+    - кфкмв
+
+- analyte_id: troponin
+  name_ru: Тропонин
+  panel: lipids_cardio
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - troponin
+    - Тропонин
+    - "Тропонин-1"
+    - тропонин
+
+- analyte_id: bnp
+  name_ru: BNP
+  panel: lipids_cardio
+  unit_canonical: null
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - BNP
+    - bnp
+
+- analyte_id: nt_probnp
+  name_ru: "NT-proBNP"
+  panel: lipids_cardio
+  unit_canonical: пг/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - "NT-proBNP"
+    - "n-концевойнатрийуретическийпептид"
+    - "n-концевойпропептидмозговогонатрийуретическогогормона"
+    - "n-концевойпропептиднатрийуретическогогормона"
+    - "nt-probnp"
+    - ntprobnp
+    - Мозговой натрийуретический гормон
+    - "Мозговой натрийуретический гормон (NT-proBNP)"
+    - мозговойнатрийуретическийгормон
+    - "мозговойнатрийуретическийгормон(nt-probnp)"
+    - натрийуретическийгормон
+    - натрийуретическийпептид
+
+- analyte_id: total_cholesterol
+  name_ru: Холестерин общий
+  panel: lipids_cardio
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Cholesterol
+    - cholesterin
+    - cholesterol
+    - totalcholesterol
+    - Холестерин общий
+    - общийхолестерин
+    - холестеринобщий
+
+- analyte_id: ldl_c
+  name_ru: Холестерин ЛПНП
+  panel: lipids_cardio
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Cholesterol LDL
+    - cholesterolldl
+    - "ldl-cholesterin"
+    - ldlcholesterol
+    - Холестерин ЛПНП
+    - "Холестерин-ЛПНП"
+    - "холестерин-лпнп"
+    - холестеринлпнп
+
+- analyte_id: hdl_c
+  name_ru: Холестерин ЛПВП
+  panel: lipids_cardio
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - Cholesterol HDL
+    - cholesterolhdl
+    - "hdl-cholesterin"
+    - hdlcholesterol
+    - Холестерин ЛПВП
+    - "Холестерин-ЛПВП"
+    - "холестерин-лпвп"
+    - холестеринлпвп
+
+- analyte_id: vldl_c
+  name_ru: Холестерин ЛПОНП
+  panel: lipids_cardio
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - cholesterolvldl
+    - vldlcholesterol
+    - Холестерин ЛПОНП
+    - "Холестерин-ЛПОНП"
+    - "холестерин-лпонп"
+    - холестеринлпонп
+
+- analyte_id: triglycerides
+  name_ru: Триглицериды
+  panel: lipids_cardio
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Triglycerides
+    - triglyceride
+    - triglycerides
+    - Триглицериды
+    - триглицериды
+
+- analyte_id: atherogenic_index
+  name_ru: Индекс атерогенности
+  panel: lipids_cardio
+  unit_canonical: ratio
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Atherogenic Index
+    - atherogenicindex
+    - Индекс атерогенности
+    - индексатерогенности
+
+- analyte_id: apo_a1
+  name_ru: Аполипопротеин A1
+  panel: lipids_cardio
+  unit_canonical: null
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - apoa1
+    - apolipoproteina1
+    - Аполипопротеин A1
+    - аполипопротеинa
+    - "аполипопротеинa-1"
+    - аполипопротеинa1
+
+- analyte_id: apo_b
+  name_ru: Аполипопротеин B
+  panel: lipids_cardio
+  unit_canonical: г/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - apob
+    - apolipoproteinb
+    - Аполипопротеин B
+    - Аполипопротеин В
+    - аполипопротеинb
+    - аполипопротеинв
+
+- analyte_id: lp_a
+  name_ru: Липопротеин (а)
+  panel: lipids_cardio
+  unit_canonical: г/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - lipoproteina
+    - lp(a)
+    - Аполипопротеин А1
+    - Липопротеин (а)
+    - липопротеин(а)
+    - липопротеина
+
+- analyte_id: glucose
+  name_ru: Глюкоза
+  panel: glucose_metabolism
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Glucose
+    - Urine Glucose
+    - glucose
+    - glukose
+    - Глюкоза
+    - глюкоза
+
+- analyte_id: hba1c
+  name_ru: Гликированный гемоглобин
+  panel: glucose_metabolism
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - "hba1%"
+    - "hba1%(гликированныйгемоглобин)"
+    - hba1c
+    - Гликированный гемоглобин
+    - "Гликированный гемоглобин (HbA1%)"
+    - "Гликированный гемоглобин (HbA1%)***"
+    - Гликозилированный Hb
+    - Гликозилированный гемоглобин (HBA1c)
+    - гликированныйгемоглобин
+    - гликозилированный гемоглобин
+    - гликозилированный гемоглобин (hba1c)
+    - гликозилированныйhb
+
+- analyte_id: insulin
+  name_ru: Инсулин
+  panel: glucose_metabolism
+  unit_canonical: мкМЕ/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - insulin
+    - Инсулин
+    - инсулин
+
+- analyte_id: c_peptide
+  name_ru: "C-пептид"
+  panel: glucose_metabolism
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "C-пептид"
+    - "c-peptide"
+    - "c-пептид"
+    - cpeptid
+    - cpeptide
+    - "С-пептид"
+    - "с-пептид"
+
+- analyte_id: homa_ir
+  name_ru: "HOMA-IR"
+  panel: glucose_metabolism
+  unit_canonical: null
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Chlamydia traсhomatis
+    - "HOMA-IR"
+    - homa
+    - "homa-ir"
+    - homair
+    - indexhoma
+    - "Индекс HOMA-IR"
+
+- analyte_id: leptin
+  name_ru: Лептин
+  panel: glucose_metabolism
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - leptin
+    - Лептин
+    - лептин
+
+- analyte_id: crp
+  name_ru: "С-реактивный белок"
+  panel: inflammation_hemostasis
+  unit_canonical: мг/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - "C-Reactive Protein"
+    - "c-reactiveprotein"
+    - crp
+    - hsCRP
+    - "С-реактивный белок"
+    - "С-реактивный белок (СРБ)"
+    - "С-реактивный белок, высокочувствительный"
+    - "с-реактивный белок(высокочувствительный)"
+    - "с-реактивныйбелок"
+    - "с-реактивныйбелок(вч)"
+    - "с-реактивныйбелок(высокочувствительный)"
+
+- analyte_id: homocysteine
+  name_ru: Гомоцистеин
+  panel: inflammation_hemostasis
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - homocysteine
+    - Гомоцистеин
+    - гомоцистеин
+
+- analyte_id: revmatoidnyy_faktor
+  name_ru: Ревматоидный фактор
+  panel: inflammation_hemostasis
+  unit_canonical: Ед/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - rf
+    - rheumatoidfactor
+    - Ревматоидный фактор
+    - ревматоидныйфактор
+
+- analyte_id: achtv
+  name_ru: АЧТВ
+  panel: inflammation_hemostasis
+  unit_canonical: сек
+  value_type: quantitative
+  direction: window
+  aliases:
+    - APTT
+    - aptt
+    - АЧТВ
+    - АЧТВ (активированное частичное тромбопластиновое время)
+    - активированноечастичноетромбопластиновоевремя
+    - ачтв
+    - ачтв(активированноечастичноетромбопластиновоевремя)
+    - ачтвактивированноечастичноетромбопластиновое
+
+- analyte_id: protrombinovoe_vremya
+  name_ru: Протромбиновое время
+  panel: inflammation_hemostasis
+  unit_canonical: сек
+  value_type: quantitative
+  direction: window
+  aliases:
+    - pt
+    - Протромбиновое время
+    - протромбиновоевремя
+
+- analyte_id: protrombin_quick
+  name_ru: Протромбин (Quick)
+  panel: inflammation_hemostasis
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Prothrombin
+    - prothrombin
+    - quick
+    - Протромбин (Quick)
+    - Протромбин по Квику
+    - протромбинпоквику
+
+- analyte_id: protrombinovyy_indeks
+  name_ru: Протромбиновый индекс
+  panel: inflammation_hemostasis
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: window
+  aliases:
+    - pti
+    - Протромбиновый индекс
+    - протромбиновыйиндекс
+    - пти
+
+- analyte_id: mno
+  name_ru: МНО
+  panel: inflammation_hemostasis
+  unit_canonical: ratio
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Int. Normalized Ratio (INR)
+    - inr
+    - intnormalizedratio
+    - intnormalizedratio(inr)
+    - МНО
+    - МНО (международное нормализованное отношение)
+    - международноенормализованноеотношение
+    - мно
+
+- analyte_id: fibrinogen
+  name_ru: Фибриноген
+  panel: inflammation_hemostasis
+  unit_canonical: г/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - fibrinogen
+    - Фибриноген
+    - фибриноген
+
+- analyte_id: trombinovoe_vremya
+  name_ru: Тромбиновое время
+  panel: inflammation_hemostasis
+  unit_canonical: сек
+  value_type: quantitative
+  direction: window
+  aliases:
+    - thrombintime
+    - tt
+    - Тромбиновое время
+    - тромбиновоевремя
+
+- analyte_id: rfmk
+  name_ru: РФМК
+  panel: inflammation_hemostasis
+  unit_canonical: мг/100
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - soluablefibrinmonomercomplexes
+    - РФМК
+    - "РФМК (растворимые фибрин-мономерные комплексы)"
+    - рфмк
+    - "рфмк(растворимыефибрин-мономерныекомплексы)"
+
+- analyte_id: antitrombin_iii
+  name_ru: Антитромбин III
+  panel: inflammation_hemostasis
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - antithrombiniii
+    - atiii
+    - Антитромбин III
+    - антитромбин3
+    - антитромбиниii
+
+- analyte_id: volchanochnyy_antikoagulyant
+  name_ru: Волчаночный антикоагулянт
+  panel: inflammation_hemostasis
+  unit_canonical: сек
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - la
+    - lupusanticoagulant
+    - Волчаночный антикоагулянт
+    - Волчаночный антикоагулянт (скрининг)
+    - волчаночныйантикоагулянт
+
+- analyte_id: d_dimer
+  name_ru: "D-димер"
+  panel: inflammation_hemostasis
+  unit_canonical: мг/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - "D-Dimer"
+    - "D-димер"
+    - "d-dimer"
+    - "d-димер"
+    - ddimer
+
+- analyte_id: sodium
+  name_ru: Натрий
+  panel: iron_electrolytes
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Sodium
+    - na
+    - natrium
+    - sodium
+    - Натрий
+    - Натрий (Na+)
+    - натрий
+    - натрий(na+)
+    - натрийna+
+
+- analyte_id: potassium
+  name_ru: Калий
+  panel: iron_electrolytes
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Potassium
+    - k
+    - kalium
+    - potassium
+    - Калий
+    - Калий (К+)
+    - калий
+
+- analyte_id: chloride
+  name_ru: Хлор
+  panel: iron_electrolytes
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Chloride
+    - chlorid
+    - chloride
+    - Хлор
+    - "Хлор (Cl-)"
+    - хлор
+
+- analyte_id: calcium
+  name_ru: Кальций
+  panel: iron_electrolytes
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - ca
+    - calcium
+    - Кальций
+    - Кальций общий
+    - кальций
+
+- analyte_id: calcium_ionized
+  name_ru: Кальций ионизированный
+  panel: iron_electrolytes
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Ca (ионизированный)
+    - ca(ионизированный)
+    - caионизированный
+    - ionizedcalcium
+    - Кальций ионизированный
+    - кальцийионизированный
+
+- analyte_id: magnesium
+  name_ru: Магний
+  panel: iron_electrolytes
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Magnesium
+    - magnesium
+    - mg
+    - Магний
+    - магний
+    - магний,mg
+
+- analyte_id: phosphorus
+  name_ru: Фосфор
+  panel: iron_electrolytes
+  unit_canonical: ммоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - phosphor
+    - phosphorus
+    - Фосфор
+    - фосфор
+
+- analyte_id: iron
+  name_ru: Железо
+  panel: iron_electrolytes
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Iron
+    - eisen
+    - fe
+    - iron
+    - Железо
+    - Сывороточное железо
+    - железо
+    - сывороточноежелезо
+
+- analyte_id: tsink
+  name_ru: Цинк
+  panel: iron_electrolytes
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - zinc
+    - zink
+    - zn
+    - Цинк
+    - цинк
+    - цинк,zn
+
+- analyte_id: selen
+  name_ru: Селен
+  panel: iron_electrolytes
+  unit_canonical: ug/l
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Selenium
+    - se
+    - selen
+    - selenium
+    - Селен
+    - селен
+
+- analyte_id: med
+  name_ru: Медь
+  panel: iron_electrolytes
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - copper
+    - cu
+    - Медь
+    - медь
+
+- analyte_id: magniy_isp_ms
+  name_ru: "Магний (ИСП-МС)"
+  panel: iron_electrolytes
+  unit_canonical: мг/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Магний
+    - "Магний (ИСП-МС)"
+    - Магний, Mg
+    - магнийиспмс
+    - магнийэритроциты
+
+- analyte_id: tsink_isp_ms
+  name_ru: "Цинк (ИСП-МС)"
+  panel: iron_electrolytes
+  unit_canonical: мкг/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "Цинк (ИСП-МС)"
+    - Цинк, Zn
+    - цинкволосы
+    - цинкиспмс
+    - цинкэритроциты
+
+- analyte_id: tsink_volosy
+  name_ru: Цинк (волосы)
+  panel: iron_electrolytes
+  unit_canonical: мкг/г
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Цинк (волосы)
+    - Цинк, Zn
+    - цинкволосы
+
+- analyte_id: selen_isp_ms
+  name_ru: "Селен (ИСП-МС)"
+  panel: iron_electrolytes
+  unit_canonical: мкг/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "Селен (ИСП-МС)"
+    - Селен, Se
+    - селениспмс
+
+- analyte_id: med_isp_ms
+  name_ru: "Медь (ИСП-МС)"
+  panel: iron_electrolytes
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "Медь (ИСП-МС)"
+    - медьиспмс
+
+- analyte_id: natriy_isp_ms
+  name_ru: "Натрий (ИСП-МС)"
+  panel: iron_electrolytes
+  unit_canonical: мг/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "Натрий (ИСП-МС)"
+    - Натрий, Na
+
+- analyte_id: kaliy_isp_ms
+  name_ru: "Калий (ИСП-МС)"
+  panel: iron_electrolytes
+  unit_canonical: мг/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "Калий (ИСП-МС)"
+    - Калий, K
+
+- analyte_id: kaltsiy_isp_ms
+  name_ru: "Кальций (ИСП-МС)"
+  panel: iron_electrolytes
+  unit_canonical: мг/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "Кальций (ИСП-МС)"
+    - Кальций, Ca
+
+- analyte_id: fosfor_isp_ms
+  name_ru: "Фосфор (ИСП-МС)"
+  panel: iron_electrolytes
+  unit_canonical: мг/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "Фосфор (ИСП-МС)"
+    - Фосфор, P
+
+- analyte_id: ferritin
+  name_ru: Ферритин
+  panel: iron_electrolytes
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - Ferritin
+    - ferritin
+    - Ферритин
+    - ферритин
+
+- analyte_id: transferrin
+  name_ru: Трансферрин
+  panel: iron_electrolytes
+  unit_canonical: г/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - transferrin
+    - Коэффициент насыщения трансферрина железом
+    - Трансферрин
+    - трансферрин
+
+- analyte_id: tibc
+  name_ru: ОЖСС
+  panel: iron_electrolytes
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - tibc
+    - ОЖСС
+    - Общая железосвязывающая способность (ОЖСС)
+    - общаяжелезосвязывающаяспособность
+    - общаяжелезосвязывающаяспособность(ожсс)
+    - ожсс
+
+- analyte_id: latentnaya_zhss
+  name_ru: Латентная ЖСС
+  panel: iron_electrolytes
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - uibc
+    - Латентная ЖСС
+    - латентнаяжсс
+
+- analyte_id: rastvorimye_retseptory_transferrina_stfr
+  name_ru: Растворимые рецепторы трансферрина (sTfR)
+  panel: iron_electrolytes
+  unit_canonical: мг/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - stfr
+    - Растворимые рецепторы трансферрина (sTfR)
+    - растворимые рецепторы трансферрина (stfr)
+    - растворимыерецепторытрансферрина
+    - растворимый рецептор трансферрина
+
+- analyte_id: vitamin_b12
+  name_ru: Витамин B12
+  panel: vitamins_antioxidants
+  unit_canonical: пг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - Vitamin B12
+    - b12
+    - vitaminb12
+    - Витамин B12
+    - Витамин В12 (цианокобаламин)
+    - Витамин В12 (цианокобаламин) D
+    - витаминb12
+    - цианокобаламин
+
+- analyte_id: golotranskobalamin_aktivnyy_b12
+  name_ru: Голотранскобаламин (активный B12)
+  panel: vitamins_antioxidants
+  unit_canonical: пмоль/л
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - holotc
+    - holotranscobalamin
+    - Активный витамина В12
+    - Голотранскобаламин (активный B12)
+    - активныйb12
+    - активныйвитаминав12
+
+- analyte_id: vitamin_d_25oh
+  name_ru: "Витамин D (25-OH total)"
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - 25(oh)d
+    - "25-OH-витамин D3 (ВЭЖХ-МС)"
+    - "25-ohvitamind"
+    - "25-ohвитаминd"
+    - "25-ohвитаминd(25-гидроксикальциферол)"
+    - "25-гидроксикальциферол"
+    - vitamind
+    - "Витамин D (25-OH total)"
+    - "Витамин D (25-ОН) (кальциферол)"
+    - "Витамин D (25-ОН) (кальциферол) D проявлением токсичности витамина D"
+    - "Витамин D (25-ОН) (кальциферол) токсичности витамина D"
+    - "Витамин D (25-ОН) (кальциферол)**"
+    - витаминd
+    - "витаминd(25-он)(кальциферол)"
+    - "витаминd(25-он)кальциферол"
+    - "витаминd25-он"
+    - "витаминd25-онкальциферол"
+    - витаминd25онкальциферол
+
+- analyte_id: vitamin_d3_holekaltsiferol
+  name_ru: Витамин D3 (холекальциферол)
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - cholecalciferol
+    - vitamind3
+    - Витамин D3 (холекальциферол)
+    - витаминd3
+    - витаминd3(холекальциферол)
+    - холекальциферол
+
+- analyte_id: vitamin_d2_ergokaltsiferol
+  name_ru: Витамин D2 (эргокальциферол)
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - ergocalciferol
+    - vitamind2
+    - Витамин D2 (эргокальциферол)
+    - витаминd2
+    - витаминd2(эргокальциферол)
+    - эргокальциферол
+
+- analyte_id: folate
+  name_ru: Фолиевая кислота
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - folat
+    - folicacid
+    - folsäure
+    - Фолиевая кислота
+    - фолиеваякислота
+
+- analyte_id: folievaya_kislota_v_eritrotsitah
+  name_ru: Фолиевая кислота в эритроцитах
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - folateinredbloodcells
+    - rbcfolate
+    - Фолиевая кислота в эритроцитах
+    - фолиеваякислотавэритроцитах
+
+- analyte_id: vitamin_a
+  name_ru: Витамин A
+  panel: vitamins_antioxidants
+  unit_canonical: мкг/мл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - vitamina
+    - Витамин A
+    - Витамин А (ретинол)
+    - витаминa
+    - ретинол
+
+- analyte_id: vitamin_e
+  name_ru: Витамин E
+  panel: vitamins_antioxidants
+  unit_canonical: мкг/мл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - vitamine
+    - Витамин E
+    - Витамин E (токоферол)
+    - витаминe
+    - токоферол
+
+- analyte_id: vitamin_k
+  name_ru: Витамин K
+  panel: vitamins_antioxidants
+  unit_canonical: null
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - vitamink
+    - Витамин K
+    - витаминk
+
+- analyte_id: vitamin_b1
+  name_ru: Витамин B1
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - thiamine
+    - Витамин B1
+    - Витамин B1 (тиамин)
+    - витаминb1
+    - тиамин
+
+- analyte_id: vitamin_b2_riboflavin
+  name_ru: Витамин B2 (рибофлавин)
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Витамин B2 (рибофлавин)
+
+- analyte_id: vitamin_b5_pantotenovaya_kislota
+  name_ru: Витамин B5 (пантотеновая кислота)
+  panel: vitamins_antioxidants
+  unit_canonical: мкг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - pantothenicacid
+    - vitaminb5
+    - Витамин B5 (пантотеновая кислота)
+    - витаминb5
+    - пантотеноваякислота
+
+- analyte_id: vitamin_b6
+  name_ru: Витамин B6
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - pyridoxine
+    - Витамин B6
+    - Витамин B6 (пиридоксин)
+    - "Витамин B6 (пиридоксин), ВЭЖХ-МС/МС"
+    - витаминb6
+    - пиридоксин
+
+- analyte_id: vitamin_c
+  name_ru: Витамин C
+  panel: vitamins_antioxidants
+  unit_canonical: мкг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - vitaminc
+    - Витамин C
+    - Витамин С (аскорбиновая кислота)
+    - аскорбиноваякислота
+    - витаминc
+
+- analyte_id: beta_karotin
+  name_ru: "Бета-каротин"
+  panel: vitamins_antioxidants
+  unit_canonical: мкг/мл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - betacarotene
+    - "Бета-каротин"
+    - "бета-каротин"
+    - бетакаротин
+
+- analyte_id: koenzim_q10
+  name_ru: Коэнзим Q10
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - coenzymeq10
+    - ubiquinone
+    - Коэнзим Q10
+    - Коэнзим Q10 (убихинон)
+    - коэнзимq10
+    - коэнзимq10(убихинон)
+    - убихинон
+
+- analyte_id: glutation_vosstanovlennyy
+  name_ru: Глутатион (восстановленный)
+  panel: vitamins_antioxidants
+  unit_canonical: мкмоль/л
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - glutathione
+    - Глутатион (восстановленный)
+    - глутатион
+    - глутатион(восстановленный)
+
+- analyte_id: malonovyy_dialdegid
+  name_ru: Малоновый диальдегид
+  panel: vitamins_antioxidants
+  unit_canonical: нмоль/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - malondialdehyde
+    - mda
+    - Малоновый диальдегид
+    - малоновыйдиальдегид
+
+- analyte_id: 8_on_dezoksiguanozin
+  name_ru: "8-ОН-дезоксигуанозин"
+  panel: vitamins_antioxidants
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - "8-oh-deoxyguanosine"
+    - "8-ohdg"
+    - "8-ОН-дезоксигуанозин"
+    - "8-он-дезоксигуанозин"
+    - 8ондезоксигуанозин
+
+- analyte_id: tsh
+  name_ru: ТТГ
+  panel: thyroid
+  unit_canonical: мкМЕ/мл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - TSH
+    - TSH basal
+    - tsh
+    - tshbasal
+    - ТТГ
+    - Тиреотропный гормон (ТТГ)
+    - тиреотропныйгормон
+    - ттг
+
+- analyte_id: ft3
+  name_ru: Т3 свободный
+  panel: thyroid
+  unit_canonical: пмоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - FT3
+    - ft3
+    - Т3 свободный
+    - т3св
+    - т3свободный
+
+- analyte_id: ft4
+  name_ru: Т4 свободный
+  panel: thyroid
+  unit_canonical: пмоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - FT4
+    - ft4
+    - Т4 свободный
+    - т4св
+    - т4свободный
+
+- analyte_id: tt3
+  name_ru: Т3 общий
+  panel: thyroid
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - t3
+    - Т3 общий
+    - т3общий
+
+- analyte_id: tt4
+  name_ru: Т4 общий
+  panel: thyroid
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - t4
+    - Т4 общий
+    - т4общий
+
+- analyte_id: anti_tpo
+  name_ru: "Анти-ТПО"
+  panel: thyroid
+  unit_canonical: МЕ/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - "anti-tpo"
+    - tpoab
+    - "Анти-ТПО"
+    - "Антитела к тиреопероксидазе, анти-ТПО"
+    - "анти-тпо"
+    - антителакпероксидазе
+
+- analyte_id: anti_tg
+  name_ru: "Анти-ТГ"
+  panel: thyroid
+  unit_canonical: МЕ/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - "anti-tg"
+    - tgab
+    - "Анти-ТГ"
+    - "Антитела к тиреоглобулину, анти-ТГ"
+    - "анти-тг"
+    - антитела к тиреоглобулину
+    - "антитела к тиреоглобулину, анти-тг"
+    - "ат-тг"
+
+- analyte_id: antitela_k_retseptoram_ttg
+  name_ru: Антитела к рецепторам ТТГ
+  panel: thyroid
+  unit_canonical: МЕ/л
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - trab
+    - Антитела к рецепторам ТТГ
+    - антитела к рецепторам ттг
+
+- analyte_id: thyroglobulin
+  name_ru: Тиреоглобулин
+  panel: thyroid
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - thyroglobulin
+    - Тиреоглобулин
+    - тиреоглобулин
+
+- analyte_id: pth
+  name_ru: Паратгормон (ПТГ)
+  panel: thyroid
+  unit_canonical: пг/мл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - parathyroidhormone
+    - pth
+    - Паратгормон
+    - Паратгормон (ПТГ)
+    - Паратирин (паратгормон)
+    - паратгормон
+    - паратирин
+    - паратирин(паратгормон)
+
+- analyte_id: calcitonin
+  name_ru: Кальцитонин
+  panel: thyroid
+  unit_canonical: пг/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - calcitonin
+    - Кальцитонин
+    - кальцитонин
+
+- analyte_id: testosterone_total
+  name_ru: Тестостерон общий
+  panel: sex_steroids
+  unit_canonical: нмоль/л
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - Testosterone
+    - testosterone
+    - totaltestosterone
+    - Тестостерон
+    - Тестостерон общий
+    - Тестостерон общий в сыворотке (ВЭЖХ)
+    - тестостерон
+    - тестостеронобщий
+
+- analyte_id: testosterone_free
+  name_ru: Тестостерон свободный
+  panel: sex_steroids
+  unit_canonical: пг/мл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - freetestosterone
+    - Тестостерон свободный
+    - Тестостерон свободный в сыворотке (ВЭЖХ)
+    - тестостеронсвободный
+
+- analyte_id: testosteron_v_slyune
+  name_ru: Тестостерон в слюне
+  panel: sex_steroids
+  unit_canonical: нмоль/л
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - salivarytestosterone
+    - Свободный тестостерон
+    - Тестостерон
+    - Тестостерон в слюне
+    - тестостеронвслюне
+
+- analyte_id: estradiol
+  name_ru: Эстрадиол
+  panel: sex_steroids
+  unit_canonical: пмоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - Estradiol
+    - e2
+    - estradiol
+    - Эстрадиол
+    - Эстрадиол (высокочувствительный)
+    - Эстрадиол в сыворотке (ВЭЖХ)
+    - эстрадиол
+
+- analyte_id: lh
+  name_ru: ЛГ
+  panel: sex_steroids
+  unit_canonical: мМЕ/мл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - LH
+    - lh
+    - luteinizinghormone
+    - ЛГ
+    - Лютеинизирующий гормон (ЛГ)
+    - лг
+    - лютеинизирующийгормон
+    - лютеинизирующийгормон(лг)
+
+- analyte_id: fsh
+  name_ru: ФСГ
+  panel: sex_steroids
+  unit_canonical: мМЕ/мл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - FSH
+    - "follicle-stimulatinghormone"
+    - fsh
+    - ФСГ
+    - Фолликулостимулирующий гормон (ФСГ)
+    - фолликулостимулирующийгормон
+    - фолликулостимулирующийгормон(фсг)
+    - фсг
+
+- analyte_id: prolactin
+  name_ru: Пролактин
+  panel: sex_steroids
+  unit_canonical: mlU/L
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Prolactin
+    - prolactin
+    - Пролактин
+    - пролактин
+
+- analyte_id: dgea_s
+  name_ru: "ДГЭА-С"
+  panel: sex_steroids
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "dhea-s"
+    - dheas
+    - "ДГЭА-С"
+    - "дгэа-с"
+
+- analyte_id: dgea
+  name_ru: ДГЭА
+  panel: sex_steroids
+  unit_canonical: мкг/дл
+  value_type: quantitative
+  direction: window
+  aliases:
+    - dhea
+    - ДГЭА
+    - "Дегидроэпиандростерона сульфат, ДГЭА-S"
+    - дгэа
+
+- analyte_id: progesteron
+  name_ru: Прогестерон
+  panel: sex_steroids
+  unit_canonical: null
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - progesterone
+    - Прогестерон
+    - прогестерон
+
+- analyte_id: shbg
+  name_ru: ГСПГ
+  panel: sex_steroids
+  unit_canonical: нмоль/л
+  value_type: quantitative
+  direction: window
+  aliases:
+    - SHBG
+    - Sex hormone binding Globulin.
+    - sexhormonebindingglobulin
+    - sexhormonebindingglobulin.
+    - shbg
+    - ГСПГ
+    - Глобулин, связывающий половые
+    - Глобулин, связывающий половые гормоны,
+    - Глобулин, связывающий половые гормоны, SHBG
+    - "Секс-гормоны связ. глобулин"
+    - глобулинсвязывающийполовые
+    - глобулинсвязывающийполовыегормоны
+    - гспг
+    - "секс-гормонысвязанглобулин"
+    - "секс-гормонысвязглобулин"
+
+- analyte_id: cortisol
+  name_ru: Кортизол
+  panel: sex_steroids
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - cortisol
+    - Кортизол
+    - кортизол
+
+- analyte_id: 17_on_pregnenolon
+  name_ru: "17-ОН-прегненолон"
+  panel: sex_steroids
+  unit_canonical: нмоль/л
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "17-hydroxypregnenolone"
+    - "17-oh-pregnenolone"
+    - "17-ОН-прегненолон"
+    - "17-он-прегненолон"
+    - 17онпрегненолон
+
+- analyte_id: 17_on_progesteron
+  name_ru: "17-ОН-прогестерон"
+  panel: sex_steroids
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - "17-hydroxyprogesterone"
+    - "17-oh-progesterone"
+    - "17-ОН-прогестерон"
+    - "17-он-прогестерон"
+    - 17онпрогестерон
+
+- analyte_id: pregnenolon
+  name_ru: Прегненолон
+  panel: sex_steroids
+  unit_canonical: null
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - pregnenolone
+    - Прегненолон
+    - прегненолон
+
+- analyte_id: androstendion
+  name_ru: Андростендион
+  panel: sex_steroids
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - androstenedione
+    - Андростендион
+    - андростендион
+
+- analyte_id: kortizon
+  name_ru: Кортизон
+  panel: sex_steroids
+  unit_canonical: null
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - cortisone
+    - Кортизон
+    - кортизон
+
+- analyte_id: ig_a
+  name_ru: IgA
+  panel: immune_infections
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - IgA
+    - iga
+
+- analyte_id: ig_g
+  name_ru: IgG
+  panel: immune_infections
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - IgG
+    - igg
+
+- analyte_id: ig_m
+  name_ru: IgM
+  panel: immune_infections
+  unit_canonical: null
+  value_type: quantitative
+  direction: window
+  aliases:
+    - IgM
+    - igm
+
+- analyte_id: ig_e
+  name_ru: IgE
+  panel: immune_infections
+  unit_canonical: МЕ/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - IgE
+    - ige
+    - Иммуноглобулин lgE общий
+    - иммуноглобулинigeобщий
+    - иммуноглобулинlgeобщий
+
+- analyte_id: psa_total
+  name_ru: ПСА общий
+  panel: reproduction
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - psatotal
+    - totalpsa
+    - ПСА общий
+    - "ПСА общий *"
+    - псаобщий
+
+- analyte_id: psa_free
+  name_ru: ПСА свободный
+  panel: reproduction
+  unit_canonical: нг/мл
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - freepsa
+    - ПСА свободный
+    - "ПСА свободный *"
+    - псасвободный
+
+- analyte_id: indeks_svobodnogo_psa
+  name_ru: Индекс свободного ПСА
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - freepsaindex
+    - Индекс свободного ПСА
+    - индекссвободногопса
+
+- analyte_id: anti_hiv
+  name_ru: "Anti-HIV"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Anti-HIV"
+    - "Anti-HIV-1/HIV-2"
+    - "anti-hiv"
+    - "anti-hiv-1/hiv-2"
+    - hiv
+    - hiv1p24
+    - Антитела к ВИЧ 1, 2 типа, антиген p24
+    - антителаквич1,2типа,антигенp24
+    - антителаквич12типа,антигенp24
+    - антителаквич12типаантигенp24
+
+- analyte_id: hbsag
+  name_ru: HBsAg
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - HBsAg
+    - hbsag
+    - Поверхностный антиген вируса гепатита В,
+    - Поверхностный антиген вируса гепатита В, HBsAg
+    - поверхностныйантигенвирусагепатитав
+    - поверхностныйантигенвирусагепатитав,
+
+- analyte_id: anti_hbs_antitela_k_hbsag
+  name_ru: "Anti-HBs (антитела к HBsAg)"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Anti-HBs (антитела к HBsAg)"
+    - "anti-hbs"
+    - antihbs
+    - "Антитела к поверхностному антигену вируса гепатита В, anti-HBs"
+    - "Антитела к поверхностному антигену вируса гепатита В, anti-HBsAg"
+    - антителакповерхностномуантигенувирусагепатитав
+    - "антителакповерхностномуантигенувирусагепатитавanti-hbs"
+
+- analyte_id: anti_hcv_igg
+  name_ru: "Anti-HCV IgG"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Anti-HCV IgG"
+    - "anti-hcvigg"
+    - "Антитела к вирусу гепатита C, anti-HCV"
+    - "антителаквирусугепатитаc,anti-hcv"
+    - "антителаквирусугепатитасanti-hcv"
+
+- analyte_id: anti_hsv
+  name_ru: "Anti-HSV"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Anti-HSV"
+    - Herpes Simplex virus I,II
+    - herpessimplexviruii
+    - herpessimplexvirusi,ii
+    - hsvigg
+    - Антитела к вирусу простого герпеса 1 и 2 типов lgG, HSV IgG
+    - антителаквирусупростогогерпеса
+    - антителаквирусупростогогерпеса1и2типов
+    - антителаквирусупростогогерпеса1и2типовlggherpessimplexvirusi/iiigg
+    - антителаквирусупростогогерпеса1и2типовlgghsvigg
+    - типов lgG, HSV IgG
+    - типовlgg,hsvigg
+
+- analyte_id: anti_mycoplasma_genitalium
+  name_ru: "Anti-Mycoplasma genitalium"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Anti-Mycoplasma genitalium"
+    - Myсoplasma genitalium
+    - mycoplasmagenitalium
+    - myсoplasmagenitalium
+
+- analyte_id: anti_mycoplasma_hominis
+  name_ru: "Anti-Mycoplasma hominis"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Anti-Mycoplasma hominis"
+    - Myсoplasma hominis
+    - mycoplasmahominis
+    - myсoplasmahominis
+
+- analyte_id: anti_candida_igg
+  name_ru: "Anti-Candida IgG"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Anti-Candida IgG"
+    - candidaalb.igg
+    - Антитела к кандиде lgG, Candida alb. IgG
+    - антителаккандиде
+    - антителаккандидеlggcandidaalbigg
+
+- analyte_id: anti_m_tuberculosis
+  name_ru: "Anti-M.tuberculosis"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Anti-M.tuberculosis"
+    - Микобактерии туберкулеза, M.tuberculosis
+    - микобактериитуберкулеза,m.tuberculosis
+    - микобактериитуберкулезаmtuberculosis
+
+- analyte_id: sifilis_rpr
+  name_ru: Сифилис RPR
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Syphilis RPR
+    - syphilisrpr
+    - Сифилис RPR
+    - Сифилис RPR, антикардиолипиновый тест
+
+- analyte_id: anti_treponema_pallidum
+  name_ru: "Anti-Treponema pallidum"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Anti-Treponema pallidum"
+    - "anti-trepon.pallidumtotaligg+igm"
+    - "anti-treponemapallidum"
+    - Сифилис, антитела к Treponema pallidum
+    - Сифилис, антитела к Treponema pallidum lgM,IgG, суммарно, колич.
+    - Сифилис, антитела к Treponema.pallidum
+    - сифилис,антителакtreponema.pallidum
+    - сифилисантителактрепонема
+
+- analyte_id: anti_varicella_zoster_igg
+  name_ru: "Anti-Varicella-Zoster IgG"
+  panel: immune_infections
+  unit_canonical: отрицательно
+  value_type: titer
+  direction: informational
+  aliases:
+    - "Anti-Varicella-Zoster IgG"
+    - "anti-vzv"
+    - "varicella-zosterigg"
+    - "varicella-zostervirusigg"
+    - varicellazosterigg
+    - vziggg
+    - "Антитела к вирусу Варицелла-Зостер IgG, Varicella"
+    - "Антитела к вирусу Варицелла-Зостер IgG, Varicella Zoster IgG"
+    - "Антитела к вирусу Варицелла-Зостер lgG,"
+    - "антителаквирусуварицелла-зостерlgg,"
+    - "антителаквирусуварицелла-зостеригg,varicellazosterigg"
+    - "антителаквирусуварицелла-зостеригг"
+    - антителаквирусуварицеллазостерigg
+    - антителаквирусуварицеллазостерlgg
+
+- analyte_id: anti_measles_igg
+  name_ru: "Anti-Measles IgG"
+  panel: immune_infections
+  unit_canonical: МЕ/мл
+  value_type: titer
+  direction: informational
+  aliases:
+    - "Anti-Measles IgG"
+    - "anti-measles"
+    - measlesvirusigg
+    - Антитела к вирусу кори lgG, Measles virus
+    - Антитела к вирусу кори lgG, Measles virus IgG
+    - антителаквирусукориlgg
+    - антителаквирусукориlgg,measlesvirus
+
+- analyte_id: anti_pertussis_igg
+  name_ru: "Anti-Pertussis IgG"
+  panel: immune_infections
+  unit_canonical: null
+  value_type: titer
+  direction: informational
+  aliases:
+    - "Anti-Pertussis IgG"
+    - "anti-pertussis"
+    - bordetellapertussisigg
+    - Антитела к возбудителю коклюша IgG,
+    - антителаквозбудителюкоклюшаigg
+    - антителаквозбудителюкоклюшаigg,
+
+- analyte_id: anti_diphtheria_igg
+  name_ru: "Anti-Diphtheria IgG"
+  panel: immune_infections
+  unit_canonical: МЕ/мл
+  value_type: titer
+  direction: informational
+  aliases:
+    - "Anti-Diphtheria IgG"
+    - "anti-diphtheria"
+    - corynebacteriumdiphtheriae
+    - diphtheriatoxoidiggantibody
+    - Антитела к дифтерийной палочке, Corynebacterium diphtheriae
+    - Антитела к дифтерийной палочке, Corynebacterium diphtheriae ME/мл
+    - Антитела к дифтерийному анатоксину IgG, Diphtheria Toxoid IgG Antibody колич.
+    - антителакдифтерийнойпалочке
+    - антителакдифтерийнойпалочкеcorynebacteriumdiphtheriae
+    - антителакдифтерийномуанатоксинуigg
+    - антителакдифтерийномуанатоксинуiggdiphtheria
+
+- analyte_id: anti_tetanus_igg
+  name_ru: "Anti-Tetanus IgG"
+  panel: immune_infections
+  unit_canonical: МЕ/мл
+  value_type: titer
+  direction: informational
+  aliases:
+    - "Anti-Tetanus IgG"
+    - clostridiumtetaniigg
+    - tetanusiggantibody
+    - Антитела к возбудителю столбняка
+    - Антитела к возбудителю столбняка (Clostridium tetani)
+    - антителаквозбудителюстолбняка
+    - антителаквозбудителюстолбняка(clostridiumtetani)
+
+- analyte_id: anti_rubella_igg
+  name_ru: "Anti-Rubella IgG"
+  panel: immune_infections
+  unit_canonical: МЕ/мл
+  value_type: titer
+  direction: informational
+  aliases:
+    - "Anti-Rubella IgG"
+    - "anti-rubella"
+    - rubellaigg
+    - Антитела к вирусу краснухи lgG, Rubella IgG
+    - Антитела к вирусу краснухи lgG, Rubella IgG вирусу кори не выявлен,
+    - антителаквирусукраснухиigg
+    - антителаквирусукраснухиlgg
+    - антителаквирусукраснухиlgg,rubellaigg
+
+- analyte_id: anti_mumps_igg
+  name_ru: "Anti-Mumps IgG"
+  panel: immune_infections
+  unit_canonical: КП
+  value_type: titer
+  direction: informational
+  aliases:
+    - "Anti-Mumps IgG"
+    - "anti-mumps"
+    - mumpsigg
+    - Антитела к вирусу паротита lgG, Mumps IgG
+    - антителаквирусупаротитаigg
+    - антителаквирусупаротитаlgg
+    - антителаквирусупаротитаlgg,mumpsigg
+
+- analyte_id: anti_toxoplasma_igg
+  name_ru: "Anti-Toxoplasma IgG"
+  panel: immune_infections
+  unit_canonical: МЕ/мл
+  value_type: titer
+  direction: informational
+  aliases:
+    - "Anti-Toxoplasma IgG"
+    - "anti-toxoplasma"
+    - toxoplasmaigg
+    - Антитела к токсоплазме lgG, Toxoplasma IgG
+    - Антитела к токсоплазме lgG, Toxoplasma IgG Антитела к цитомегаловирусу lgG, CMV IgG
+    - антителактоксоплазмеlgg
+    - антителактоксоплазмеlgg,toxoplasmaigg
+
+- analyte_id: anti_cmv_igg
+  name_ru: "Anti-CMV IgG"
+  panel: immune_infections
+  unit_canonical: УЕ
+  value_type: titer
+  direction: informational
+  aliases:
+    - "Anti-CMV IgG"
+    - "anti-HBs Антитела к цитомегаловирусу lgG, CMV IgG"
+    - "anti-cmv"
+    - cmvigg
+    - Антитела к цитомегаловирусу lgG, CMV IgG
+    - антителакцитомегаловирусуigg
+    - антителакцитомегаловирусуlgg
+    - антителакцитомегаловирусуlgg,cmvigg
+
+- analyte_id: omega3_index
+  name_ru: "Омега-3 индекс"
+  panel: other_markers
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - "omega-3index"
+    - "Омега-3 индекс"
+    - "Омега-3 индекс ( отношение суммы эйкозапентаеновой (EPA) и докозагексаеновой (DHA) кислот к общему"
+    - "омега-3индекс"
+    - омега3индекс
+
+- analyte_id: cag_povtory_gen_ar
+  name_ru: "CAG-повторы (ген AR)"
+  panel: other_markers
+  unit_canonical: повт.
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "AR: (CAG)n repeat"
+    - "CAG-повторы (ген AR)"
+    - andrareceptorcagrepeats
+    - ar(cag)nrepeat
+    - "cag-повторы"
+    - cagповторы
+
+- analyte_id: period_vozderzhaniya
+  name_ru: Период воздержания
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Период воздержания
+
+- analyte_id: obem_eyakulyata
+  name_ru: Объем эякулята
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Объем
+    - Объем эякулята
+
+- analyte_id: tsvet_eyakulyata
+  name_ru: Цвет эякулята
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Цвет эякулята
+
+- analyte_id: srok_razzhizheniya
+  name_ru: Срок разжижения
+  panel: reproduction
+  unit_canonical: мин
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Срок разжижения
+
+- analyte_id: vyazkost_eyakulyata
+  name_ru: Вязкость эякулята
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Вязкость
+    - Вязкость эякулята
+
+- analyte_id: ph_eyakulyata
+  name_ru: pH эякулята
+  panel: reproduction
+  unit_canonical: null
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - pH эякулята
+
+- analyte_id: agregatsiya
+  name_ru: Агрегация
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Агрегация
+
+- analyte_id: agglyutinatsiya
+  name_ru: Агглютинация
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Агглютинация
+
+- analyte_id: eritrotsity_v_eyakulyate
+  name_ru: Эритроциты в эякуляте
+  panel: reproduction
+  unit_canonical: null
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Эритроциты в эякуляте
+
+- analyte_id: leykotsity_v_eyakulyate
+  name_ru: Лейкоциты в эякуляте
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Лейкоциты в эякуляте
+
+- analyte_id: kletki_epiteliya_v_eyakulyate
+  name_ru: Клетки эпителия в эякуляте
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Клетки эпителия в эякуляте
+
+- analyte_id: sliz_v_eyakulyate
+  name_ru: Слизь в эякуляте
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Слизь в эякуляте
+
+- analyte_id: nezrelye_polovye_kletki
+  name_ru: Незрелые половые клетки
+  panel: reproduction
+  unit_canonical: на 100
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Незрелые половые клетки
+
+- analyte_id: kontsentratsiya_spermatozoidov
+  name_ru: Концентрация сперматозоидов
+  panel: reproduction
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - Концентрация сперматозоидов
+
+- analyte_id: aktivno_podvizhnye_spermatozoidy
+  name_ru: "Активно-подвижные сперматозоиды"
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "Активно-подвижные сперматозоиды"
+
+- analyte_id: podvizhnye_s_postupatelnym_dvizheniem
+  name_ru: Подвижные с поступательным движением
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Подвижные с поступательным движением
+
+- analyte_id: podvizhnye_s_nepostupatelnym_dvizheniem
+  name_ru: Подвижные с непоступательным движением
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Подвижные с непоступательным движением
+
+- analyte_id: nepodvizhnye_spermatozoidy
+  name_ru: Неподвижные сперматозоиды
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Неподвижные сперматозоиды
+
+- analyte_id: zhiznesposobnost_zhivye
+  name_ru: Жизнеспособность — живые
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Жизнеспособность — живые
+
+- analyte_id: zhiznesposobnost_mertvye
+  name_ru: Жизнеспособность — мертвые
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Жизнеспособность — мертвые
+
+- analyte_id: morfologicheski_normalnye_spermatozoidy
+  name_ru: Морфологически нормальные сперматозоиды
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Морфологически нормальные сперматозоиды
+
+- analyte_id: patologicheskie_formy
+  name_ru: Патологические формы
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Патологические формы
+
+- analyte_id: defekty_golovki
+  name_ru: Дефекты головки
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Дефекты головки
+
+- analyte_id: defekty_sredney_chasti
+  name_ru: Дефекты средней части
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Дефекты средней части
+
+- analyte_id: defekty_hvosta
+  name_ru: Дефекты хвоста
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Дефекты хвоста
+
+- analyte_id: tsitoplazmicheskie_kapli
+  name_ru: Цитоплазмические капли
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Цитоплазмические капли
+
+- analyte_id: mar_test_iga
+  name_ru: "MAR-тест IgA"
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "MAR-тест IgA"
+
+- analyte_id: mar_test_igg
+  name_ru: "MAR-тест IgG"
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "MAR-тест IgG"
+
+- analyte_id: hba_test
+  name_ru: "HBA-тест"
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "HBA-тест"
+
+- analyte_id: tunel_dna_frag
+  name_ru: TUNEL — фрагментация ДНК сперматозоидов
+  panel: reproduction
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Sperm with DNA strand breaks (TUNEL assay)
+    - TUNEL — фрагментация ДНК сперматозоидов
+
+- analyte_id: bia_weight
+  name_ru: Вес
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Вес
+
+- analyte_id: idealnyy_ves
+  name_ru: Идеальный вес
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Идеальный вес
+
+- analyte_id: kontrol_vesa
+  name_ru: Контроль веса
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Контроль веса
+
+- analyte_id: kontrol_zhira
+  name_ru: Контроль жира
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Контроль жира
+
+- analyte_id: kontrol_muskulatury
+  name_ru: Контроль мускулатуры
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Контроль мускулатуры
+
+- analyte_id: imt
+  name_ru: ИМТ
+  panel: body_composition
+  unit_canonical: кг/м²
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - ИМТ
+
+- analyte_id: protsent_zhira_pzht
+  name_ru: Процент жира (ПЖТ)
+  panel: body_composition
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Процент жира (ПЖТ)
+
+- analyte_id: stepen_ozhireniya
+  name_ru: Степень ожирения
+  panel: body_composition
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Степень ожирения
+
+- analyte_id: zhirovaya_massa
+  name_ru: Жировая масса
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Жировая масса
+
+- analyte_id: myshechnaya_massa_msm
+  name_ru: Мышечная масса (МСМ)
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - Мышечная масса (МСМ)
+
+- analyte_id: proteiny
+  name_ru: Протеины
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Протеины
+
+- analyte_id: mineralnye_veschestva
+  name_ru: Минеральные вещества
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Минеральные вещества
+
+- analyte_id: mineralnye_v_va_osseous
+  name_ru: "Минеральные в-ва (Osseous)"
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "Минеральные в-ва (Osseous)"
+
+- analyte_id: vnutrikletochnaya_voda
+  name_ru: Внутриклеточная вода
+  panel: body_composition
+  unit_canonical: л
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Внутриклеточная вода
+
+- analyte_id: vnekletochnaya_voda
+  name_ru: Внеклеточная вода
+  panel: body_composition
+  unit_canonical: л
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Внеклеточная вода
+
+- analyte_id: obschaya_voda_organizma
+  name_ru: Общая вода организма
+  panel: body_composition
+  unit_canonical: л
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Общая вода организма
+
+- analyte_id: bazovyy_rashod_energii_ioo
+  name_ru: Базовый расход энергии (ИОО)
+  panel: body_composition
+  unit_canonical: ккал
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Базовый расход энергии (ИОО)
+
+- analyte_id: indeks_taliya_bedra_itb
+  name_ru: Индекс талия/бёдра (ИТБ)
+  panel: body_composition
+  unit_canonical: ratio
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Индекс талия/бёдра (ИТБ)
+
+- analyte_id: fitnes_ochki
+  name_ru: "Фитнес-очки"
+  panel: body_composition
+  unit_canonical: балл
+  value_type: quantitative
+  direction: lower_worse
+  aliases:
+    - "Фитнес-очки"
+
+- analyte_id: segment_myshtsy_pravaya_ruka
+  name_ru: Сегмент. мышцы — правая рука
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Сегмент. мышцы — правая рука
+
+- analyte_id: segment_myshtsy_levaya_ruka
+  name_ru: Сегмент. мышцы — левая рука
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Сегмент. мышцы — левая рука
+
+- analyte_id: segment_myshtsy_tulovische
+  name_ru: Сегмент. мышцы — туловище
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Сегмент. мышцы — туловище
+
+- analyte_id: segment_myshtsy_pravaya_noga
+  name_ru: Сегмент. мышцы — правая нога
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Сегмент. мышцы — правая нога
+
+- analyte_id: segment_myshtsy_levaya_noga
+  name_ru: Сегмент. мышцы — левая нога
+  panel: body_composition
+  unit_canonical: кг
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Сегмент. мышцы — левая нога
+
+- analyte_id: okruzhnost_talii
+  name_ru: Окружность талии
+  panel: body_composition
+  unit_canonical: см
+  value_type: quantitative
+  direction: higher_worse
+  aliases:
+    - Окружность талии
+
+- analyte_id: obem_myshts_ruki
+  name_ru: Объём мышц руки
+  panel: body_composition
+  unit_canonical: см
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Объём мышц руки

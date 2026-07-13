@@ -1,0 +1,45 @@
+# Render Blueprint — health-multi (мультитенантный сервис, PLAN_multiuser v3).
+# Docker: нужен системный pdftotext (poppler-utils). Тариф платный (starter) —
+# сервис не должен засыпать: вебхуки N ботов (§9).
+#
+# Cron-бэкап: отдельный Render Cron Job, команда:
+#   curl -s -X POST -H "Authorization: Bearer $LAB_INGEST_TOKEN" https://<service>/admin/backup
+services:
+  - type: web
+    name: health-multi
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    numInstances: 1        # РОВНО один: SQLite, один писатель (§3.1)
+    healthCheckPath: /health
+    disk:
+      name: health-multi-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DB_PATH
+        value: /data/health.db
+      - key: PUBLIC_URL              # https://health-multi.onrender.com — для setWebhook
+        sync: false
+      - key: LAB_INGEST_TOKEN        # админ-канал (§6.3); в прокси дэша НЕ хранится
+        sync: false
+      - key: BOT_TOKEN_FERNET_KEY    # Fernet-ключ шифрования bot-токенов (§9)
+        sync: false
+      - key: BACKUP_PUBLIC_KEY_PEM   # публичный ключ бэкапов; приватный ТОЛЬКО локально
+        sync: false
+      - key: CORS_ORIGINS            # origin дэша med-dash-multi
+        sync: false
+      - key: ADMIN_LOGIN             # bootstrap первого админа при пустой БД
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: S3_ENDPOINT             # опц.: R2/S3 для бэкапов (M1: «оба»)
+        sync: false
+      - key: S3_BUCKET
+        sync: false
+      - key: S3_ACCESS_KEY
+        sync: false
+      - key: S3_SECRET_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY       # fallback-парсер (опц.)
+        sync: false

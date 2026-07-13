@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+data/
+*.db
+*.db-wal
+*.db-shm
+.env
+.env.*
+outbox/
+*.pem

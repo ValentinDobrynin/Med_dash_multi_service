@@ -1,0 +1,31 @@
+# Render Blueprint — health storage service (TZ №2).
+# Single instance only: SQLite on a persistent disk does not tolerate
+# horizontal scaling (one writer per file).
+services:
+  - type: web
+    name: health-storage
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    numInstances: 1
+    healthCheckPath: /health
+    disk:
+      name: health-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DB_PATH
+        value: /data/health.db
+      - key: LAB_INGEST_TOKEN
+        sync: false        # secret: set in Render dashboard
+      - key: READ_TOKEN
+        sync: false        # secret: set in Render dashboard (optional; unset = GET open)
+      - key: WEIGHT_BOT_TOKEN
+        sync: false        # secret: Telegram bot token from @BotFather
+      - key: TG_WEBHOOK_SECRET
+        sync: false        # secret: random string, same as in setWebhook
+      - key: TG_ALLOWED_USER_IDS
+        sync: false        # csv of telegram user ids allowed to send weight CSV
+      - key: CORS_ORIGINS
+        sync: false        # csv of dash origins, e.g. https://health-dash.vercel.app
