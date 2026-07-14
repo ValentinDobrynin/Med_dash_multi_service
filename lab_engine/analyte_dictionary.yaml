@@ -3165,3 +3165,208 @@
   direction: informational
   aliases:
     - Объём мышц руки
+
+- analyte_id: neutrophils_band
+  name_ru: Нейтрофилы палочкоядерные %
+  panel: blood_count
+  unit_canonical: "%"
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - Палочкоядерные %
+    - Палочкоядерные
+    - палочкоядерныенейтрофилы
+
+# ── Копрограмма (качественная): только отклонения + pH (ТЗ-доработка под Настю) ──
+- analyte_id: copro_1
+  name_ru: "Билирубин (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Билирубин (кал)"
+- analyte_id: copro_2
+  name_ru: "Жирные кислоты (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Жирные кислоты (кал)"
+- analyte_id: copro_3
+  name_ru: "Клетчатка непереваримая (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Клетчатка непереваримая (кал)"
+- analyte_id: copro_4
+  name_ru: "Клетчатка переваримая (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Клетчатка переваримая (кал)"
+- analyte_id: copro_5
+  name_ru: "Консистенция кала"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Консистенция кала"
+- analyte_id: copro_6
+  name_ru: "Крахмал внекл. (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Крахмал внекл. (кал)"
+- analyte_id: copro_7
+  name_ru: "Крахмал внутрикл. (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Крахмал внутрикл. (кал)"
+- analyte_id: copro_8
+  name_ru: "Лейкоциты (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Лейкоциты (кал)"
+- analyte_id: copro_9
+  name_ru: "Мицелий гриба (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Мицелий гриба (кал)"
+- analyte_id: copro_10
+  name_ru: "Мыла (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Мыла (кал)"
+- analyte_id: copro_11
+  name_ru: "Мыш. волокна исчерч. (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Мыш. волокна исчерч. (кал)"
+- analyte_id: copro_12
+  name_ru: "Мыш. волокна неисчерч. (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Мыш. волокна неисчерч. (кал)"
+- analyte_id: copro_13
+  name_ru: "Нейтральный жир (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Нейтральный жир (кал)"
+- analyte_id: copro_14
+  name_ru: "Простейшие (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Простейшие (кал)"
+- analyte_id: copro_15
+  name_ru: "Слизь (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Слизь (кал)"
+- analyte_id: copro_16
+  name_ru: "Соединительная ткань (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Соединительная ткань (кал)"
+- analyte_id: copro_17
+  name_ru: "Споры гриба (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Споры гриба (кал)"
+- analyte_id: copro_18
+  name_ru: "Стеркобилин (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Стеркобилин (кал)"
+- analyte_id: copro_19
+  name_ru: "Флора йодофильная (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Флора йодофильная (кал)"
+- analyte_id: copro_20
+  name_ru: "Цвет кала"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Цвет кала"
+- analyte_id: copro_21
+  name_ru: "Эритроциты (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Эритроциты (кал)"
+- analyte_id: copro_22
+  name_ru: "Яйца гельминтов (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Яйца гельминтов (кал)"
+- analyte_id: copro_23
+  name_ru: "Кислотность кала"
+  panel: coprogram
+  unit_canonical: null
+  value_type: quantitative
+  direction: informational
+  aliases:
+    - "Кислотность кала"
+- analyte_id: copro_24
+  name_ru: "Оксалаты (кал)"
+  panel: coprogram
+  unit_canonical: null
+  value_type: qualitative
+  direction: informational
+  aliases:
+    - "Оксалаты (кал)"

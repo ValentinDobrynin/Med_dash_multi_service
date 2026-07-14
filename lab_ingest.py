@@ -28,7 +28,7 @@ import tempfile
 from pathlib import Path
 
 from lab_engine.parse_core import (
-    detect_lab, extract_date, split_visits, parse_text,
+    detect_lab, extract_date, split_visits, parse_text, parse_coprogram,
 )
 from lab_engine.canonicalize import canonicalize
 
@@ -93,6 +93,7 @@ def parse_text_to_rows(text: str, filename: str = "upload.pdf"):
     for visit_date_chunk, chunk_text in split_visits(text):
         date = visit_date_chunk or extract_date(filename, text)
         params = parse_text(chunk_text)
+        params += parse_coprogram(chunk_text)   # копрограмма: отклонения + pH (qual)
         if is_saliva:
             for p in params:
                 if p.get("name") == "Тестостерон общий":

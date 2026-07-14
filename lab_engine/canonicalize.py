@@ -112,9 +112,12 @@ def canonicalize(visits, dict_path: Path = DICT_PATH):
         source = r.get("lab") or "Неизвестно"
         for p in r.get("params", []):
             name = p.get("name", "")
-            if is_blocked_name(name):
+            group = p.get("group", "")
+            # Копрограмма (group='coprogram') — намеренные качественные маркеры,
+            # блок-лист (жиры/клетчатка/крахмал…) для них НЕ применяем.
+            if group != "coprogram" and is_blocked_name(name):
                 continue
-            if categorize(name, p.get("group", "")) == "antibiotic":
+            if categorize(name, group) == "antibiotic":
                 continue
             aid = alias2id.get(norm_alias(name)) or alias2id.get(norm_alias(p.get("raw_name", "")))
             if not aid:
