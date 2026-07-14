@@ -29,6 +29,14 @@ services:
         sync: false
       - key: CORS_ORIGINS            # origin дэша med-dash-multi
         sync: false
+      - key: AUTH_BOT_TOKEN         # общий бот-вахтёр (выдача инвайтов); отдельный от per-user ботов
+        sync: false
+      - key: AUTH_BOT_WEBHOOK_SECRET # секрет вебхука /tg/auth/webhook (openssl rand -hex 24)
+        sync: false
+      - key: AUTH_ADMIN_TG_IDS      # csv Telegram-id админов, кому летят запросы на одобрение
+        sync: false
+      - key: DASH_URL               # опц.: ссылки бота-вахтёра; по умолчанию берётся из CORS_ORIGINS
+        sync: false
       - key: ADMIN_LOGIN             # bootstrap первого админа при пустой БД
         sync: false
       - key: ADMIN_PASSWORD

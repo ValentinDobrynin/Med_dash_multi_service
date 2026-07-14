@@ -98,6 +98,21 @@ CREATE TABLE IF NOT EXISTS pending_uploads (
 );
 CREATE INDEX IF NOT EXISTS idx_pending_user_chat ON pending_uploads(user_id, chat_id, status, created_at);
 CREATE INDEX IF NOT EXISTS idx_pending_user_day  ON pending_uploads(user_id, created_at);
+
+-- Заявки на доступ через бота-вахтёра (authbot.py): новый человек пишет боту →
+-- admin подтверждает кнопкой → бот шлёт инвайт-ссылку. tg_id — Telegram-id заявителя.
+CREATE TABLE IF NOT EXISTS access_requests (
+    id          TEXT PRIMARY KEY,       -- uuid4
+    tg_id       TEXT NOT NULL,          -- Telegram-id заявителя (= chat_id в личке)
+    tg_username TEXT,
+    name        TEXT,                   -- «Имя Фамилия», введённое заявителем
+    status      TEXT NOT NULL DEFAULT 'awaiting_name', -- awaiting_name|pending|approved|rejected
+    invite_code TEXT,                   -- заполняется при одобрении
+    created_at  TEXT NOT NULL,
+    decided_at  TEXT,
+    decided_by  TEXT                    -- Telegram-id админа, принявшего решение
+);
+CREATE INDEX IF NOT EXISTS idx_access_req_tg ON access_requests(tg_id, status, created_at);
 """
 
 

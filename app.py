@@ -23,6 +23,7 @@ from fastapi.responses import StreamingResponse
 import db
 import telegram
 import security
+import authbot
 from auth import (SESSION_COOKIE, create_session, drop_session, get_conn,
                   require_admin_token, require_admin_user, require_user)
 
@@ -1257,6 +1258,32 @@ async def ingest_dictionary(request: Request, conn: sqlite3.Connection = Depends
     )
     conn.commit()
     return {"replaced": len(items)}
+
+
+@app.post("/admin/auth_bot/setup")
+def admin_auth_bot_setup(admin: dict = Depends(require_admin_any)):
+    """Ставит вебхук общего бота-вахтёра (AUTH_BOT_TOKEN). Для деплоя."""
+    public = _public_url()
+    if not public:
+        raise HTTPException(status_code=503, detail="PUBLIC_URL не задан")
+    try:
+        return authbot.setup_webhook(public)
+    except RuntimeError as e:
+        raise HTTPException(status_code=503, detail=str(e))
+    except Exception as e:  # noqa: BLE001
+        raise HTTPException(status_code=502, detail=f"setWebhook не прошёл: {e}")
+
+
+@app.post("/tg/auth/webhook")
+async def tg_auth_webhook(request: Request, conn: sqlite3.Connection = Depends(get_conn)):
+    """Вебхук бота-вахтёра (общий бот выдачи инвайтов)."""
+    secret = os.environ.get("AUTH_BOT_WEBHOOK_SECRET", "")
+    header = request.headers.get("X-Telegram-Bot-Api-Secret-Token", "")
+    if not secret or header != secret:
+        raise HTTPException(status_code=403, detail="bad webhook secret")
+    update = await request.json()
+    authbot.handle_update(conn, update)
+    return {"ok": True}
 
 
 @app.post("/admin/backup")
