@@ -643,10 +643,11 @@ def _fmt_num(v):
     return str(int(f)) if f == int(f) else str(f)
 
 
-def _format_preview_values(preview: dict, max_lines: int = 60) -> str:
+def _format_preview_values(preview: dict, filename: str | None = None, max_lines: int = 60) -> str:
     rows = preview.get("rows") or []
     dates = preview.get("dates") or []
-    head = f"📄 Распознал {_vals(preview.get('row_count', len(rows)))}"
+    head = (f"📄 {filename}\nРаспознал {_vals(preview.get('row_count', len(rows)))}"
+            if filename else f"📄 Распознал {_vals(preview.get('row_count', len(rows)))}")
     if len(dates) == 1:
         head += f" за {dates[0]}"
     head += ":"
@@ -1488,32 +1489,33 @@ async def tg_webhook(
 
     # --- PDF анализов ---
     if doc.get("file_id") and fname.endswith(".pdf"):
+        upload_name = doc.get("file_name") or "upload.pdf"
         if _pdf_quota_left(conn, user["user_id"]) <= 0:
             telegram.send_message(token, chat_id,
-                                  f"⚠️ Дневная квота {PDF_DAILY_QUOTA} PDF исчерпана, попробуй завтра.")
+                                  f"📄 {upload_name}\n⚠️ Дневная квота {PDF_DAILY_QUOTA} PDF исчерпана, попробуй завтра.")
             return {"ok": True}
         try:
             file_path = telegram.get_file(token, doc["file_id"])
             raw = telegram.download_file(token, file_path)
         except Exception as e:  # noqa: BLE001
-            telegram.send_message(token, chat_id, f"⚠️ Не смог скачать файл: {e}")
+            telegram.send_message(token, chat_id, f"📄 {upload_name}\n⚠️ Не смог скачать файл: {e}")
             return {"ok": True}
         if len(raw) > MAX_PDF_BYTES:
-            telegram.send_message(token, chat_id, "⚠️ Файл больше 25 МБ.")
+            telegram.send_message(token, chat_id, f"📄 {upload_name}\n⚠️ Файл больше 25 МБ.")
             return {"ok": True}
-        preview, err = _build_pdf_preview(raw, doc.get("file_name") or "upload.pdf")
+        preview, err = _build_pdf_preview(raw, upload_name)
         if err:
-            telegram.send_message(token, chat_id, "⚠️ Разбор PDF на сервере пока недоступен.")
+            telegram.send_message(token, chat_id, f"📄 {upload_name}\n⚠️ Разбор PDF на сервере пока недоступен.")
             return {"ok": True}
         if not preview.get("ok"):
             telegram.send_message(token, chat_id,
-                                  "🚫 " + preview.get("summary", "Не смог разобрать."))
+                                  f"📄 {upload_name}\n🚫 " + preview.get("summary", "Не смог разобрать."))
             return {"ok": True}
         pid = _create_pending(conn, user["user_id"], "telegram", chat_id,
-                              doc.get("file_name") or "upload.pdf", preview)
+                              upload_name, preview)
         telegram.send_message(
             token, chat_id,
-            _format_preview_values(preview) + "\n\nЗалить?",
+            _format_preview_values(preview, filename=upload_name) + "\n\nЗалить?",
             reply_markup=_yesno_keyboard(pid),
         )
         return {"ok": True}

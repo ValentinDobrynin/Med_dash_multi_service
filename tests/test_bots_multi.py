@@ -108,10 +108,12 @@ def test_pdf_flow_via_bot_and_two_pending_yes(client, make_user, tg, canned_pdf,
     canned_pdf["value"] = 4.99
     hook_message(client, bot_b, document={"file_id": "f2", "file_name": "b.pdf"})
 
-    # у обоих превью с кнопками
+    # у обоих превью с кнопками, и в тексте видно имя файла (диагностика пачки)
     kb_a = [s for s in tg["sent"] if s["token"] == BOT_A and s["reply_markup"]]
     kb_b = [s for s in tg["sent"] if s["token"] == BOT_B and s["reply_markup"]]
     assert kb_a and kb_b
+    assert "a.pdf" in kb_a[-1]["text"]
+    assert "b.pdf" in kb_b[-1]["text"]
 
     # оба шлют текстовое «Да» одновременно
     hook_message(client, bot_a, text="Да")
@@ -121,6 +123,20 @@ def test_pdf_flow_via_bot_and_two_pending_yes(client, make_user, tg, canned_pdf,
     lb = client.get("/labs", headers=b["headers"]).text
     assert "5.41" in la and "4.99" not in la
     assert "4.99" in lb and "5.41" not in lb
+
+
+def test_reject_message_names_the_file(client, make_user, tg, monkeypatch):
+    """Отказ бота содержит имя файла — иначе в пачке не понять, что сломалось."""
+    monkeypatch.setattr(appmod.telegram, "get_file", lambda token, fid: "p/x.pdf")
+    monkeypatch.setattr(appmod.telegram, "download_file", lambda token, p: b"%PDF-fake")
+    # превью с ok=False (как «не смог определить дату»)
+    monkeypatch.setattr(appmod, "_build_pdf_preview",
+                        lambda data, name: ({"ok": False, "summary": "Не смог определить дату забора."}, None))
+    u = make_user("alice")
+    bot = connect_bot(client, tg, u, BOT_A, TG_A)
+    hook_message(client, bot, document={"file_id": "f1", "file_name": "копрограмма_май.pdf"})
+    rejects = [s for s in tg["sent"] if s["token"] == BOT_A and "🚫" in s["text"]]
+    assert rejects and "копрограмма_май.pdf" in rejects[-1]["text"]
 
 
 def test_callback_yes_commits_own_only(client, make_user, tg, canned_pdf, monkeypatch):
